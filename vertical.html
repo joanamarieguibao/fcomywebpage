@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WST 249 Vertical Navigation</title>
+
+<style>
+  :root {
+    --bg-color: #fff0f6;
+    --sidebar-color: #ff66a3;
+    --hover-color: #ffb3cc;
+    --active-color: #ff3385;
+    --text-light: #ffe6f0;
+    --text-dark: #222;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Verdana',, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+  }
+
+  .layout {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    width: 240px;
+    background-color: var(--sidebar-color);
+    color: var(--text-light);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .logo {
+    font-weight: 800;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-light);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: var(--hover-color);
+    color: #fff;
+  }
+
+  nav a.active {
+    background-color: var(--active-color);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  main {
+    flex: 1;
+    padding: 40px;
+  }
+
+  @media (max-width: 760px) {
+    .layout {
+      flex-direction: column;
+    }
+
+    .sidebar {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+    }
+
+    nav ul {
+      flex-direction: row;
+      gap: 12px;
+    }
+
+    .logo {
+      font-size: 1em;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="logo">WST 249</div>
+      <nav>
+        <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <h1>Welcome to WST 249</h1>
+    </main>
+  </div>
+</body>
+</html>
